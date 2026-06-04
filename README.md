@@ -1,46 +1,40 @@
-# Project Name
+# UNet Burned Area Mapping
 
-Brief description of what this project does.
+Semantic segmentation of burned/not-burned areas using UNet,
+trained on PlanetScope imagery with optional Sentinel-2 and Landsat enhancement.
 
-## Installation
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-...
-
-# UNet Patch Pipeline
-
-Short description — what, for what task, on what data.
+## Overview
+This project provides a complete pipeline for:
+- Training UNet on PlanetScope imagery
+- Fine-tuning with Sentinel-2 and/or Landsat data
+- Predicting burned areas on new imagery
 
 ## Project Structure
+project_root/                        ← main folder (on Google Drive)
+├── data/
+│   ├── sites/
+│   │   └── {site_name}/
+│   │       ├── raw/                 ← downloaded imagery
+│   │       └── patches/
+│   │           └── {patches_folder}/
+│   └── merged_patches_datasets/
+│       └── {dataset_name}/
+├── models/
+│   └── final/
+│       └── {experiment}.pt
+├── predictions/
 ├── notebooks/
+│   ├── load_sentinel_landsat.ipynb
 │   ├── patch_creation.ipynb
-│   └── patch_merging.ipynb
-├── patches/
-│   └── v1_size256_overlap32/
+│   ├── merging_patches.ipynb
+│   ├── training.ipynb
+│   └── prediction.ipynb
 └── README.md
 
+## Quick Start
+1. Download this project folder to your Google Drive
+2. Follow the pipeline described in the [Wiki](link-to-wiki)
+
 ## Requirements
+- Google Colab
 - Python 3.10+
-- torch, torchvision, numpy...
-
-## Usage
-
-### 1. Patch Creation (per site)
-Open `patch_creation.ipynb` and set parameters:
-- `SITE_NAME` = "site_A"
-- `PATCH_SIZE` = 256
-
-### 2. Patch Merging & Training
-Open `patch_merging.ipynb`, specify sites to merge.
-
-## Parameters
-| Parameter   | Default | Description          |
-|-------------|---------|----------------------|
-| patch_size  | 256     | Size of each patch   |
-| overlap     | 32      | Overlap between patches |
-
-## Versioning
-Patches are stored with version tags: `v{n}_size{s}_overlap{o}/`

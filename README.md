@@ -10,6 +10,7 @@ This project provides a complete pipeline for:
 - Predicting burned areas on new imagery
 
 ## Project Structure
+```
 project_root/                        ← main folder (on Google Drive)
 ├── data/
 │   ├── sites/
@@ -30,7 +31,7 @@ project_root/                        ← main folder (on Google Drive)
 │   ├── training.ipynb
 │   └── prediction.ipynb
 └── README.md
-
+```
 ## Quick Start
 1. Download this project folder to your Google Drive
 2. Follow the pipeline described in the [Wiki](link-to-wiki)

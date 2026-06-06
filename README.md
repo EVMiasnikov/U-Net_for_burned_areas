@@ -56,7 +56,7 @@ project_root/                        ← main folder (on Google Drive)
 └── README.md
 ```
 ## Quick Start
-1. Download this project folder to your Google Drive
+1. Download and unzip this project folder to your Google Drive
 2. Follow the pipeline described in the [Wiki](https://github.com/EVMiasnikov/U-Net_for_burned_areas/wiki)
 
 ## Requirements

@@ -5,7 +5,7 @@ trained on PlanetScope imagery with optional Sentinel-2 and Landsat enhancement.
 
 ## Overview
 This project provides a complete pipeline for:
-- Training UNet on PlanetScope imagery
+- Training UNet on PlanetScope imagery and ground trough polygons
 - Fine-tuning with Sentinel-2 and/or Landsat data
 - Predicting burned areas on new imagery
 

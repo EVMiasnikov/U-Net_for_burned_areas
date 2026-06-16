@@ -40,7 +40,9 @@ project_root/                        ← main folder (on Google Drive)
 │       └── {experiment}/
 │           └── {experiment_epoch_n}.pt
 ├── Predictions/
-├── notebooks/
+│   └──{site_name}/
+│       └── predicted_segmentation.tif                                         ← Final prediction map
+├── notebooks/                                                                 ← Tools to run
 │   ├── User_Satellite_Downloads.ipynb
 │   ├── Patch_creation.ipynb
 │   ├── Merging_patches.ipynb
@@ -48,10 +50,16 @@ project_root/                        ← main folder (on Google Drive)
 │   ├── Fine-tuning.ipynb
 │   └── Prediction.ipynb
 ├── src/
-├── Pre+Post_Downloads/
 ├── User's_Inputs/
 │   ├── AOI_Polygons/
+│   │   └── AOI_of_969_site.geojson          ← To Sentinel-2 and Landsat download
 │   └── Input_Rasters_For_Prediction/
+│       └──{site_name}/
+│          ├── LANDSAT_PRE.tif
+│          ├── LANDSAT_POST.tif
+│          ├── SENTINEL_POST.tif
+│          ├── SENTINEL_PRE.tif
+│          └── 969_predictors.tif
 ├── tesnorboard/
 └── README.md
 ```
